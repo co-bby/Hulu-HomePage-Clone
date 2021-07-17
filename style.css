@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600;700&display=swap');
+
 *{
 	box-sizing: border-box;
 	padding: 0;
@@ -63,6 +65,16 @@ h3{
 	text-decoration: underline;
 	
 }
+.text-xl{
+font-size:70px;
+font-weight: bold;
+}
+.sub-text{
+	max-width:850px;
+	margin-bottom:10px;
+	font-size: 24px;
+
+}
 .btn-outline{
 	background:none;
 	color:#fff;
@@ -116,6 +128,23 @@ h3{
 	font-size:18px;
 	margin:25px 0;
 }
+.header:after{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width:100%;
+	height:180px;
+	z-index:1;
+	background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.76) 15.54%,
+    rgba(0, 0, 0, 0.192) 60.23%,
+    rgba(0, 0, 0, 8e-5) 100%
+  );
+
+
+}
 /* Sub Header */
 .sub-header{
 	display:grid;
@@ -136,9 +165,70 @@ h3{
 	text-align: center;
 
 }
+/* Categories */
+.categories{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align:center;
+	padding:90px 40px;
+
+}
+.categories .covers{
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	margin-top:40px;
+	gap:20px;
+
+
+}
+.categories .covers >div{
+	height: 500px;
+	width:300px;
+	position: relative;
+
+}
+.categories .cover-grad{
+	background:linear-gradient(156.82deg, rgba(0,0,0,0.6) 4.58%, rgba(0,0,0,0) 69.61%),linear-gradient(24.5deg, rgba(0,0,0,0.2) 4.71%, rgba(0,0,0,0) 71.49%);
+	position: absolute;
+	top:0;
+	right: 0;
+	left: 0;
+	bottom:0;
+	width: 100%;
+	 
+}
+.categories .cover-text{
+	position: absolute;
+	top:20px;
+	left:20px;
+	text-align: left;
+
+}
+.categories .cover-1{
+	background:url(img/cover-1.jpg)
+}
+.categories .cover-2{
+	background:url(img/cover-2.jpg)
+}
+.categories .cover-3{
+	background:url(img/cover-3.jpg)
+}
+.categories .cover-4{
+	background:url(img/cover-4.jpg)
+}
+
 
 
 /* Media Queries */
+@media (max-width: 1100px) {
+  .categories .covers {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+
 @media (max-width: 768px){
 	.header .logo{
 		width:200px;
@@ -167,5 +257,19 @@ h3{
 	.sub-header>div:last-of-type{
 		justify-self: center;
 		align-self: center;
+}
+.text-xl{
+	line-height:1.3;
+	font-size:40px;
+
+}
+.sub-text{
+	font-size:20px;
+
+
+}
+.categories .covers{
+	grid-template-columns: 1fr;
+}
 
 }
