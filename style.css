@@ -212,16 +212,16 @@ font-weight: bold;
 
 }
 .categories .cover-1{
-	background:url(img/cover-1.jpg)
+	background:url(img/cover-1.jpg)no-repeat center center /cover;
 }
 .categories .cover-2{
-	background:url(img/cover-2.jpg)
+	background:url(img/cover-2.jpg)no-repeat center center /cover;
 }
 .categories .cover-3{
-	background:url(img/cover-3.jpg)
+	background:url(img/cover-3.jpg)no-repeat center center /cover;
 }
 .categories .cover-4{
-	background:url(img/cover-4.jpg)
+	background:url(img/cover-4.jpg)no-repeat center center /cover;
 }
 /* Live */
 .live{
